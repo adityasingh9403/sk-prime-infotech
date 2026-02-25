@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-    Menu, X, ChevronRight, Cpu, Globe, Layout, 
-    Send, Mail, Phone, ArrowUpRight 
+import {
+    Menu, X, ChevronRight, Cpu, Globe, Layout,
+    Send, Mail, Phone, ArrowUpRight
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -23,7 +23,6 @@ const Navbar = () => {
     }, [location]);
 
     const navLinks = [
-        { name: 'Home', path: '/' },
         { name: 'Services', path: '/services' },
         { name: 'Projects', path: '/projects' },
         { name: 'About Us', path: '/about' },
@@ -33,24 +32,19 @@ const Navbar = () => {
     const isActive = (path) => location.pathname === path;
 
     return (
-        <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${
-            scrolled 
-            ? 'bg-slate-900/80 backdrop-blur-2xl py-3 border-b border-white/5 shadow-2xl' 
-            : 'bg-transparent py-6'
-        }`}>
+        <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrolled
+                ? 'bg-slate-900/80 backdrop-blur-2xl py-3 border-b border-white/5 shadow-2xl'
+                : 'bg-transparent py-6'
+            }`}>
             <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
-                
+
                 {/* BRANDING */}
-                <Link to="/" className="flex items-center space-x-3 group relative z-[120]">
-                    <div className="bg-blue-600 p-2 rounded-xl group-hover:rotate-[360deg] transition-transform duration-700 shadow-lg shadow-blue-600/20">
-                        <Cpu className="w-5 h-5 text-white" />
-                    </div>
-                    <div className="flex flex-col">
-                        <span className="text-xl font-black tracking-tighter text-white leading-none">
-                            SK PRIME <span className="text-blue-500">INFOTECH</span>
-                        </span>
-                        <span className="text-[9px] uppercase tracking-[0.3em] text-slate-500 font-bold">Solutions Architect</span>
-                    </div>
+                <Link to="/" className="flex items-center group relative z-[120]">
+                    <img
+                        src="/SK Prime Infotech.png"
+                        alt="SK Prime Infotech Logo"
+                        className="h-20 md:h-22 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
                 </Link>
 
                 {/* DESKTOP NAV */}
@@ -59,9 +53,8 @@ const Navbar = () => {
                         <Link
                             key={link.name}
                             to={link.path}
-                            className={`px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all ${
-                                isActive(link.path) ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-slate-400 hover:text-white'
-                            }`}
+                            className={`px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest transition-all ${isActive(link.path) ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' : 'text-slate-400 hover:text-white'
+                                }`}
                         >
                             {link.name}
                         </Link>
@@ -76,7 +69,7 @@ const Navbar = () => {
                 </div>
 
                 {/* MOBILE TOGGLE */}
-                <button 
+                <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="lg:hidden relative z-[120] p-3 bg-white/5 border border-white/10 rounded-xl text-white outline-none"
                 >
@@ -87,7 +80,7 @@ const Navbar = () => {
             {/* MOBILE OVERLAY MENU */}
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div 
+                    <motion.div
                         initial={{ x: '100%' }}
                         animate={{ x: 0 }}
                         exit={{ x: '100%' }}
@@ -96,7 +89,7 @@ const Navbar = () => {
                     >
                         {/* Background Decoration */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 blur-[120px] -z-10"></div>
-                        
+
                         <div className="flex flex-col h-full pt-32 px-8 pb-12 overflow-y-auto">
                             {/* NAVIGATION LINKS */}
                             <div className="flex flex-col space-y-4 mb-16">
@@ -110,9 +103,8 @@ const Navbar = () => {
                                     >
                                         <Link
                                             to={link.path}
-                                            className={`text-5xl font-black tracking-tighter flex items-center justify-between group ${
-                                                isActive(link.path) ? 'text-white pl-4 border-l-4 border-blue-600' : 'text-slate-700 hover:text-white'
-                                            }`}
+                                            className={`text-5xl font-black tracking-tighter flex items-center justify-between group ${isActive(link.path) ? 'text-white pl-4 border-l-4 border-blue-600' : 'text-slate-700 hover:text-white'
+                                                }`}
                                         >
                                             {link.name}
                                             <ChevronRight className={`transition-all ${isActive(link.path) ? 'opacity-100 text-blue-600' : 'opacity-0'}`} size={32} />

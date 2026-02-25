@@ -211,11 +211,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 4. THE PROCESS INTEGRATION */}
-      <div className="border-t border-slate-800/50">
-        <Process />
-      </div>
-
       {/* 5. FINAL CTA SECTION */}
       <section className="py-32 px-6">
         <motion.div 

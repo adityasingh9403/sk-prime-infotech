@@ -7,56 +7,55 @@ const Process = () => {
     {
       icon: <Search size={28} />,
       title: "Discovery & Strategy",
-      desc: "Hum aapke business goals ko samajhte hain aur ek technical blueprint taiyar karte hain.",
+      desc: "We understand your business goals and prepare a comprehensive technical blueprint.",
       color: "from-blue-500 to-cyan-500",
       shadow: "shadow-blue-500/20"
     },
     {
       icon: <PenTool size={28} />,
       title: "Architecture & Design",
-      desc: "UI/UX design ke saath-saath hum backend ki scalability aur security framework design karte hain.",
+      desc: "Along with UI/UX design, we architect a scalable and secure backend framework.",
       color: "from-purple-500 to-indigo-500",
       shadow: "shadow-purple-500/20"
     },
     {
       icon: <Code2 size={28} />,
       title: "Agile Development",
-      desc: "Sprints mein coding hoti hai, jisme aapko har hafte progress dikhayi jati hai.",
+      desc: "Development is carried out in sprints, with weekly progress updates shared with you.",
       color: "from-emerald-500 to-teal-500",
       shadow: "shadow-emerald-500/20"
     },
     {
       icon: <ShieldCheck size={28} />,
       title: "Quality Assurance",
-      desc: "Rigorous testing aur security audits taaki bug-free aur secure launch mil sake.",
+      desc: "Rigorous testing and security audits to ensure a bug-free and secure launch.",
       color: "from-orange-500 to-red-500",
       shadow: "shadow-orange-500/20"
     },
     {
       icon: <Rocket size={28} />,
       title: "Deployment & Support",
-      desc: "Global servers par launch aur uske baad 24/7 technical maintenance.",
+      desc: "Launch on global servers followed by 24/7 technical maintenance and support.",
       color: "from-pink-500 to-rose-500",
       shadow: "shadow-pink-500/20"
     }
   ];
-
   return (
-    <section className="py-20 lg:py-32 bg-[#030712] px-6 relative overflow-hidden">
+    <section className="bg-[#030712] px-6 relative overflow-hidden">
       {/* Background Decorative Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-600/5 blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 lg:mb-24">
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             className="text-blue-500 font-black uppercase tracking-[0.3em] text-[10px] md:text-xs mb-4"
           >
             How We Work
           </motion.p>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-6xl lg:text-7xl font-black text-white tracking-tighter"
@@ -72,7 +71,7 @@ const Process = () => {
           {/* Steps Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-6 relative z-10">
             {steps.map((step, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +90,7 @@ const Process = () => {
                   <div className="absolute -top-2 -right-2 bg-white text-black text-[10px] font-black px-2 py-1 rounded-md shadow-xl">
                     0{idx + 1}
                   </div>
-                  
+
                   {/* Mobile Arrow Connector */}
                   {idx !== steps.length - 1 && (
                     <div className="lg:hidden absolute -bottom-10 left-1/2 -translate-x-1/2 text-slate-700 animate-bounce">

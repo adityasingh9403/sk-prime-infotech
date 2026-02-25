@@ -34,7 +34,7 @@ const TechStack = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-32 bg-[#030712] px-6 relative">
+    <section className="py-5 lg:py-5 bg-[#030712] px-6 relative">
       <div className="max-w-7xl mx-auto">
         
         {/* Header Section */}
@@ -61,7 +61,7 @@ const TechStack = () => {
             whileInView={{ opacity: 1 }}
             className="text-slate-400 text-base md:text-lg max-w-sm italic border-l-2 border-blue-600 pl-6 py-2"
           >
-            "Hum sirf tools use nahi karte, hum scalable architectures build karte hain jo future-proof hoti hain."
+            We don’t just use tools; we build scalable architectures that are future-proof.
           </motion.p>
         </div>
 
@@ -98,7 +98,7 @@ const TechStack = () => {
         </div>
 
         {/* Performance Badges - Optimized Grid for Mobile */}
-        <div className="mt-20 md:mt-32 grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 py-16 border-y border-white/5">
+        <div className="mt-10 md:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 py-16 border-y border-white/5">
            {[
              { icon: <Cpu size={24}/>, label: "High Concurrency", desc: "10k+ Req/Sec" },
              { icon: <Lock size={24}/>, label: "Enterprise Security", desc: "AES-256 Bit" },

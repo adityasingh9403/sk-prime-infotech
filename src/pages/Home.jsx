@@ -16,9 +16,9 @@ const fadeInUp = {
 const Home = () => {
   return (
     <div className="flex flex-col bg-[#030712] overflow-x-hidden w-full">
-      
+
       {/* 1. HERO SECTION - Adjusted for Navbar height */}
-      <section className="relative min-h-screen flex items-center pt-32 pb-16 lg:pt-20 lg:pb-0">
+      <section className="relative min-h-[110dvh] flex items-center pt-[120px] pb-12 md:pt-[140px] lg:pt-20 lg:pb-0">
         {/* Animated Background Gradients */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <div className="absolute top-[10%] left-[-10%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-blue-600/10 rounded-full blur-[120px]"></div>
@@ -27,22 +27,22 @@ const Home = () => {
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-            
+
             <motion.div initial="initial" animate="animate" className="text-center lg:text-left order-2 lg:order-1">
               <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 border border-blue-500/20 rounded-full bg-blue-500/5 text-blue-400 font-black text-[10px] uppercase tracking-[0.2em]">
                 <Sparkles size={14} className="animate-pulse" /> Next-Gen Software Engineering
               </motion.div>
-              
+
               <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl lg:text-[7rem] font-black text-white leading-[0.9] tracking-tighter mb-8">
                 Building <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">Digital</span> <br />
                 Powerhouses.
               </motion.h1>
-              
+
               <motion.p variants={fadeInUp} className="text-slate-400 text-lg md:text-xl mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed font-medium opacity-80">
                 SK Prime Infotech is a global technology lab specializing in high-concurrency architectures, AI systems, and enterprise ecosystems.
               </motion.p>
-              
+
               <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link to="/contact" className="group bg-blue-600 hover:bg-blue-500 text-white px-10 py-5 rounded-2xl font-black text-sm uppercase tracking-widest flex items-center justify-center transition-all shadow-2xl shadow-blue-900/40">
                   Start Engineering <ArrowRight className="ml-2 group-hover:translate-x-2 transition-transform" />
@@ -54,8 +54,8 @@ const Home = () => {
             </motion.div>
 
             {/* Visual Element: Terminal (Optimized for Mobile) */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }} 
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               className="relative order-1 lg:order-2 w-full max-w-[550px] mx-auto"
@@ -104,7 +104,7 @@ const Home = () => {
               { icon: <ShieldCheck className="text-emerald-400" />, title: "Secure Core", desc: "Military-grade encryption and data protection are baked into our architectural DNA." },
               { icon: <Globe className="text-indigo-400" />, title: "Global Scaling", desc: "Our systems are stress-tested to handle millions of requests with zero performance degradation." }
             ].map((item, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 whileHover={{ y: -5 }}
                 className="p-10 rounded-[2.5rem] bg-slate-900/30 border border-white/5 hover:border-blue-500/20 transition-all flex flex-col items-center text-center lg:items-start lg:text-left group"
@@ -132,7 +132,7 @@ const Home = () => {
               Turn your complex challenges into elegant software solutions. Join hands with India's emerging IT powerhouse.
             </p>
             <Link to="/contact" className="bg-white text-blue-950 px-10 py-5 rounded-2xl font-black text-lg uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl flex items-center gap-3">
-               Start a Consultation <ArrowUpRight size={20} />
+              Start a Consultation <ArrowUpRight size={20} />
             </Link>
           </div>
         </div>

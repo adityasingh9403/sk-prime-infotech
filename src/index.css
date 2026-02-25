@@ -8,9 +8,3 @@
 body {
   scroll-behavior: smooth;
 }
-
-@media (min-width: 1024px) {
-  body, a, button {
-    cursor: none !important;
-  }
-}
